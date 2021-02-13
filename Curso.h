@@ -1,48 +1,26 @@
+#ifndef CURSO_H
+#define CURSO_H
 #include<iostream>
+#include<string>
+#include<vector>
 using namespace std;
+
+class Reserva;
 
 class Curso{
     private:
         string nombre;
         double precio;
         bool cancelado;
+        vector<Reserva*> listaReservas;
     public:
         Curso(string name, double price, bool cancel);
         string getNombre();
         double getPrecio();
         bool getCancelado();
-        friend ostream& operator<<(ostream &, Curso &);
-        friend ostream& operator<<(ostream &, Curso* &);
+        void aniadirReserva(Reserva*);
+        void mostrarDatos();
+        //friend ostream& operator<<(ostream &, Curso* &);
 };
 
-Curso::Curso(string name, double price, bool cancel){
-    nombre = name;
-    precio = price;
-    cancelado = cancel;
-}
-
-string Curso::getNombre(){
-    return nombre;
-}
-
-double Curso::getPrecio(){
-    return precio;
-}
-
-bool Curso::getCancelado(){
-    return cancelado;
-}
-
-ostream& operator<<(ostream &Escribe, Curso &objC){
-    Escribe<<"Nombre: "<<objC.nombre<<endl;
-    Escribe<<"Precio: "<<objC.precio<<endl;
-    Escribe<<"Cancelado: "<<objC.cancelado<<endl<<endl;
-    return Escribe;
-}
-
-ostream& operator<<(ostream &Escribe, Curso* &objC){
-    Escribe<<"Nombre: "<<objC->nombre<<endl;
-    Escribe<<"Precio: "<<objC->precio<<endl;
-    Escribe<<"Cancelado: "<<objC->cancelado<<endl<<endl;
-    return Escribe;
-}
+#endif // CURSO_H

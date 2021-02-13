@@ -1,5 +1,11 @@
+#ifndef RESERVA_H
+#define RESERVA_H
+#include<string>
 #include<iostream>
 using namespace std;
+
+class Alumno;
+class Curso;
 
 class Reserva{
     private:
@@ -13,20 +19,4 @@ class Reserva{
         string getFecha();
 };
 
-Reserva::Reserva(string date, Alumno *objA, Curso *objC){
-    fecha = date;
-    alumno = objA;
-    curso = objC;
-}
-
-Alumno* Reserva::getAlumno(){
-    return alumno;
-}
-
-Curso* Reserva::getCurso(){
-    return curso;
-}
-
-string Reserva::getFecha(){
-    return fecha;
-}
+#endif // RESERVA_H

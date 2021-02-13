@@ -1,6 +1,12 @@
+#ifndef ESCUELAVERANO_H
+#define ESCUELAVERANO_H
 #include<iostream>
 #include<vector>
+
 using namespace std;
+
+class Curso;
+class Persona;
 
 class EscuelaVerano{
     private:
@@ -11,25 +17,9 @@ class EscuelaVerano{
         void agregarPersona(Persona*);
         void mostrarCursos();
         void mostrarPersonas();
+        void crearReserva(string, string, string);
+        int buscarAlumno(string);
+        int buscarCurso(string);
 };
 
-void EscuelaVerano::agregarCurso(Curso *cur){
-    listaCursos.push_back(cur);
-}
-
-void EscuelaVerano::agregarPersona(Persona *per){
-    listaPersonas.push_back(per);
-}
-
-void EscuelaVerano::mostrarCursos(){
-    for(int i=0; i<=listaCursos.size() - 1; i++){
-        cout<<listaCursos[i];
-    }
-}
-
-void EscuelaVerano::mostrarPersonas(){
-    for(int i=0; i<=listaPersonas.size() - 1; i++){
-        listaPersonas[i]->mostrarDatos();
-    }
-}
-
+#endif // ESCUELAVERANO_H

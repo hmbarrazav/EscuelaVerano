@@ -1,4 +1,8 @@
-#include<iostream>
+#ifndef ALUMNO_H
+#define ALUMNO_H
+#include<string>
+#include<vector>
+#include "Persona.h"
 using namespace std;
 
 class Reserva;
@@ -8,37 +12,13 @@ class Alumno : public Persona{
         int tipoDescuento;
         vector<Reserva*> listaReservas;
     public:
-        Alumno(string, string, string, int);
+        Alumno() {}
+        Alumno(std::string, std::string , std::string, int);
         int getTipoDescuento();
-        void aniadirReserva(Reserva*);   
         void mostrarDatos();
-        
+        void aniadirReserva(Reserva*);
         //friend ostream& operator<<(ostream &, Alumno* &);
 };
 
-Alumno::Alumno(string dni, string name, string type, int tD) : Persona(dni, name, type){
-    tipoDescuento = tD;
-}
+#endif // ALUMNO_H
 
-int Alumno::getTipoDescuento(){
-    return tipoDescuento;
-}
-
-void Alumno::mostrarDatos(){
-    cout<<"DNI: "<<DNI<<endl;
-    cout<<"Nombres: "<<nombres<<endl;
-    cout<<"Tipo Personal: "<<tipo<<endl;
-    cout<<"Tipo Descuento: "<<tipoDescuento<<endl<<endl;
-}
-
-void Alumno::aniadirReserva(Reserva *res){
-    listaReservas.push_back(res);
-}
-
-/* ostream& operator<<(ostream &Escribe, Alumno* &objA){
-    Escribe<<"DNI: "<<objA->DNI<<endl;
-    Escribe<<"Nombres: "<<objA->nombres<<endl;
-    Escribe<<"Tipo Personal: "<<objA->tipo<<endl<<endl;
-    Escribe<<"Tipo Descuento: "<<objA->tipoDescuento<<endl<<endl;
-    return Escribe;
-} */

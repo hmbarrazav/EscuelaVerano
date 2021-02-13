@@ -1,3 +1,6 @@
+#ifndef PERSONA_H
+#define PERSONA_H
+#include<string>
 #include<iostream>
 using namespace std;
 
@@ -17,36 +20,4 @@ class Persona{
         //friend ostream& operator<<(ostream &, Persona* &);
 };
 
-Persona::Persona(string dni, string names, string type){
-    DNI = dni;
-    nombres = names;
-    tipo = type;
-}
-
-string Persona::getDNI(){
-    return DNI;
-}
-
-string Persona::getNombres(){
-    return nombres;
-}
-
-string Persona::getTipo(){
-    return tipo;
-}
-
-/* ostream& operator<<(ostream &Escribe, Persona &objP){
-    Escribe<<"DNI: "<<objP.DNI<<endl;
-    Escribe<<"Nombres: "<<objP.nombres<<endl;
-    Escribe<<"Tipo: "<<objP.tipo<<endl<<endl;
-    return Escribe;
-}
-
-ostream& operator<<(ostream &Escribe, Persona* &objP){
-    Escribe<<"DNI: "<<objP->DNI<<endl;
-    Escribe<<"Nombres: "<<objP->nombres<<endl;
-    Escribe<<"Tipo: "<<objP->tipo<<endl<<endl;
-    return Escribe;
-} */
-
-
+#endif // PERSONA_H
