@@ -1,13 +1,18 @@
 #include<iostream>
 using namespace std;
 
+class Reserva;
+
 class Alumno : public Persona{
     private:
         int tipoDescuento;
+        vector<Reserva*> listaReservas;
     public:
         Alumno(string, string, string, int);
         int getTipoDescuento();
+        void aniadirReserva(Reserva*);   
         void mostrarDatos();
+        
         //friend ostream& operator<<(ostream &, Alumno* &);
 };
 
@@ -24,6 +29,10 @@ void Alumno::mostrarDatos(){
     cout<<"Nombres: "<<nombres<<endl;
     cout<<"Tipo Personal: "<<tipo<<endl;
     cout<<"Tipo Descuento: "<<tipoDescuento<<endl<<endl;
+}
+
+void Alumno::aniadirReserva(Reserva *res){
+    listaReservas.push_back(res);
 }
 
 /* ostream& operator<<(ostream &Escribe, Alumno* &objA){
