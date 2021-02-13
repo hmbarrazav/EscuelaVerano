@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1613236107 source:c:\users\hp\documents\github\escuelaverano\main.cpp
+1613236213 source:c:\users\hp\documents\github\escuelaverano\main.cpp
 	<iostream>
 	"Persona.h"
 	"Alumno.h"
@@ -7,11 +7,11 @@
 	"Reserva.h"
 	"EscuelaVerano.h"
 
-1613234583 c:\users\hp\documents\github\escuelaverano\persona.h
+1613239666 c:\users\hp\documents\github\escuelaverano\persona.h
 	<string>
 	<iostream>
 
-1613234874 c:\users\hp\documents\github\escuelaverano\alumno.h
+1613239699 c:\users\hp\documents\github\escuelaverano\alumno.h
 	<string>
 	<vector>
 	"Persona.h"
@@ -32,7 +32,7 @@
 1613234583 source:c:\users\hp\documents\github\escuelaverano\persona.cpp
 	"Persona.h"
 
-1613234828 source:c:\users\hp\documents\github\escuelaverano\alumno.cpp
+1613236152 source:c:\users\hp\documents\github\escuelaverano\alumno.cpp
 	"Alumno.h"
 	"Reserva.h"
 
@@ -41,7 +41,7 @@
 	"Alumno.h"
 	"Curso.h"
 
-1613235906 source:c:\users\hp\documents\github\escuelaverano\curso.cpp
+1613236177 source:c:\users\hp\documents\github\escuelaverano\curso.cpp
 	"Curso.h"
 	"Reserva.h"
 	"Alumno.h"

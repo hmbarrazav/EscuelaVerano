@@ -10,7 +10,6 @@ class Persona{
         string nombres;
         string tipo;
     public:
-        Persona(){}
         Persona(string, string, string);
         string getDNI();
         string getNombres();

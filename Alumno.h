@@ -12,12 +12,10 @@ class Alumno : public Persona{
         int tipoDescuento;
         vector<Reserva*> listaReservas;
     public:
-        Alumno() {}
-        Alumno(std::string, std::string , std::string, int);
+        Alumno(string, string , string, int);
         int getTipoDescuento();
         void mostrarDatos();
         void aniadirReserva(Reserva*);
-        //friend ostream& operator<<(ostream &, Alumno* &);
 };
 
 #endif // ALUMNO_H
