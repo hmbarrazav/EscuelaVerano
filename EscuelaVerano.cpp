@@ -26,17 +26,21 @@ void EscuelaVerano::mostrarPersonas(){
     }
 }
 
-void EscuelaVerano::crearReserva(string fecha, string dni, string nombreC){
+bool EscuelaVerano::crearReserva(string fecha, string dni, string nombreC){
     Reserva *reserva;
     Alumno *objA;
     int indA, indC;
     indA = buscarAlumno(dni);
     indC = buscarCurso(nombreC);
 
+    if(indA == -1 || indC == -1)
+        return false;
+
     objA = (Alumno*) listaPersonas[indA];
     reserva = new Reserva(fecha, objA , listaCursos[indC]);
     listaCursos[indC]->aniadirReserva(reserva);
     objA->aniadirReserva(reserva);
+    return true;
 }
 
 int EscuelaVerano::buscarAlumno(string dni){

@@ -32,10 +32,10 @@ void Curso::mostrarDatos(){
         cout<<"Nombre: "<<nombre<<endl;
         cout<<"Precio: "<<precio<<endl;
         if(listaReservas.size()>0){
-            cout<<"Lista de matriculados: "<<endl;
+            cout<<"Lista de alumnos con reserva de matricula: "<<endl;
             for(int i = 0; i < listaReservas.size(); i++){
                 objA = listaReservas[i]->getAlumno();
-                cout<<"\t"<<objA->getNombres()<<endl;
+                cout<<"-----> "<<i+1<<": "<<objA->getNombres()<<endl;
             }
         }
         cout<<endl;

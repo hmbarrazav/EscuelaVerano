@@ -14,7 +14,8 @@ void Alumno::mostrarDatos(){
     cout<<"DNI: "<<DNI<<endl;
     cout<<"Nombres: "<<nombres<<endl;
     cout<<"Tipo Personal: "<<tipo<<endl;
-    cout<<"Tipo Descuento: "<<tipoDescuento<<endl<<endl;
+    //cout<<"Tipo Descuento: "<<tipoDescuento<<endl;
+    cout<<endl;
 }
 
 void Alumno::aniadirReserva(Reserva *res){

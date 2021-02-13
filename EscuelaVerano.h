@@ -17,7 +17,7 @@ class EscuelaVerano{
         void agregarPersona(Persona*);
         void mostrarCursos();
         void mostrarPersonas();
-        void crearReserva(string, string, string);
+        bool crearReserva(string, string, string);
         int buscarAlumno(string);
         int buscarCurso(string);
 };
