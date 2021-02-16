@@ -13,7 +13,7 @@ class EscuelaVerano{
         vector<Curso*> listaCursos; //variable de composición
         vector<Persona*> listaPersonas; //variable de composición
     public:
-        void agregarCurso(string, double, bool);
+        void crearCurso(string, double, bool, string);
         void agregarAlumno(string, string, string, int);
         void agregarAdministrador(string, string, string);
         void agregarProfesor(string, string, string);
@@ -22,6 +22,7 @@ class EscuelaVerano{
         bool crearReserva(string, string, string);
         int buscarAlumno(string);
         int buscarCurso(string);
+        int buscarProfesor(string);
 
 };
 

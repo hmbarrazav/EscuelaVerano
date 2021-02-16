@@ -15,9 +15,11 @@ int main(){
     escV.agregarAlumno("92837412","Christian Tarqui","Alumno",1);
     escV.agregarAlumno("08946195","Carlos Condori","Alumno",1);
 
-    escV.agregarCurso("Disenio grafico",200,false);
-    escV.agregarCurso("Programacion de sitios web",100,false);
-    escV.agregarCurso("Audio y video",150,false);
+    escV.agregarProfesor("08946194","German Malaga","Profesor");
+
+    escV.crearCurso("Disenio grafico",200,false,"08946194");
+    escV.crearCurso("Programacion de sitios web",100,false,"08946194");
+    escV.crearCurso("Audio y video",150,false,"08946194");
 
     cout<<"LISTA DE PERSONAS ---------------------------"<<endl;
     escV.mostrarPersonas();

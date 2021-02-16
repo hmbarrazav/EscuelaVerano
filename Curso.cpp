@@ -4,10 +4,11 @@
 #include<iostream>
 using namespace std;
 
-Curso::Curso(string name, double price, bool cancel){
+Curso::Curso(string name, double price, bool cancel, Profesor *pro){
     nombre = name;
     precio = price;
     cancelado = cancel;
+    profesor = pro;
 }
 
 string Curso::getNombre(){
@@ -40,5 +41,17 @@ void Curso::mostrarDatos(){
         }
         cout<<endl;
     }
+}
+
+bool Curso::ofertadoPorAdministrador(int dni){
+
+}
+
+string Curso::obtenerDatosCompletos(){
+
+}
+
+void Curso::aniadirOferta(Oferta *ofer){
+
 }
 

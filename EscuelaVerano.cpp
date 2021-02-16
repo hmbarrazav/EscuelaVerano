@@ -8,8 +8,15 @@
 #include <iostream>
 using namespace std;
 
-void EscuelaVerano::agregarCurso(string name, double price, bool cancel){
-    listaCursos.push_back(new Curso(name, price, cancel));
+void EscuelaVerano::crearCurso(string name, double price, bool cancel, string dni){
+    int indP, n;
+    Profesor *objP;
+    indP = buscarProfesor(dni);
+
+    objP = (Profesor*) listaPersonas[indP];
+    listaCursos.push_back(new Curso(name, price, cancel, objP));
+    n = listaCursos.size();
+    objP->aniadirCurso(listaCursos[n-1]);
 }
 
 void EscuelaVerano::agregarAlumno(string dni, string names, string type, int tD){
@@ -63,6 +70,14 @@ int EscuelaVerano::buscarAlumno(string dni){
 int EscuelaVerano::buscarCurso(string nombreC){
     for(int i = 0; i < listaCursos.size(); i++){
         if(listaCursos[i]->getNombre() == nombreC)
+            return i;
+    }
+    return -1;
+}
+
+int EscuelaVerano::buscarProfesor(string dni){
+    for(int i = 0; i < listaPersonas.size(); i++){
+        if(listaPersonas[i]->getDNI() == dni)
             return i;
     }
     return -1;

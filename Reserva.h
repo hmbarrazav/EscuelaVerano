@@ -17,9 +17,9 @@ class Reserva{
         Matricula *matricula;
     public:
         Reserva(string, Alumno*, Curso*);
+        string getFecha();
         Alumno* getAlumno();
         Curso* getCurso();
-        string getFecha();
         void asignarMatricula(double);
 };
 
