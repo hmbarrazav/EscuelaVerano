@@ -1,7 +1,8 @@
 #ifndef ALUMNO_H
 #define ALUMNO_H
-#include<string>
-#include<vector>
+
+#include <string>
+#include <vector>
 #include "Persona.h"
 using namespace std;
 

@@ -11,11 +11,7 @@ int Alumno::getTipoDescuento(){
 }
 
 void Alumno::mostrarDatos(){
-    cout<<"DNI: "<<DNI<<endl;
-    cout<<"Nombres: "<<nombres<<endl;
-    cout<<"Tipo Personal: "<<tipo<<endl;
-    //cout<<"Tipo Descuento: "<<tipoDescuento<<endl;
-    cout<<endl;
+    Persona::mostrarDatos();
 }
 
 void Alumno::aniadirReserva(Reserva *res){

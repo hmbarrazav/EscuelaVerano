@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1613242828 source:c:\users\hp\documents\github\escuelaverano\main.cpp
+1613366352 source:c:\users\hp\documents\github\escuelaverano\main.cpp
 	<iostream>
 	"Persona.h"
 	"Alumno.h"
@@ -7,11 +7,11 @@
 	"Reserva.h"
 	"EscuelaVerano.h"
 
-1613239666 c:\users\hp\documents\github\escuelaverano\persona.h
+1613367357 c:\users\hp\documents\github\escuelaverano\persona.h
 	<string>
 	<iostream>
 
-1613239844 c:\users\hp\documents\github\escuelaverano\alumno.h
+1613359144 c:\users\hp\documents\github\escuelaverano\alumno.h
 	<string>
 	<vector>
 	"Persona.h"
@@ -21,18 +21,18 @@
 	<string>
 	<vector>
 
-1613234705 c:\users\hp\documents\github\escuelaverano\reserva.h
+1613395946 c:\users\hp\documents\github\escuelaverano\reserva.h
 	<string>
 	<iostream>
 
-1613242657 c:\users\hp\documents\github\escuelaverano\escuelaverano.h
+1613395885 c:\users\hp\documents\github\escuelaverano\escuelaverano.h
 	<iostream>
 	<vector>
 
-1613234583 source:c:\users\hp\documents\github\escuelaverano\persona.cpp
+1613367432 source:c:\users\hp\documents\github\escuelaverano\persona.cpp
 	"Persona.h"
 
-1613236152 source:c:\users\hp\documents\github\escuelaverano\alumno.cpp
+1613367375 source:c:\users\hp\documents\github\escuelaverano\alumno.cpp
 	"Alumno.h"
 	"Reserva.h"
 
@@ -47,11 +47,41 @@
 	"Alumno.h"
 	<iostream>
 
-1613242671 source:c:\users\hp\documents\github\escuelaverano\escuelaverano.cpp
+1613366844 source:c:\users\hp\documents\github\escuelaverano\escuelaverano.cpp
 	"EscuelaVerano.h"
 	"Persona.h"
 	"Reserva.h"
 	"Alumno.h"
+	"Administrador.h"
+	"Profesor.h"
 	"Curso.h"
 	<iostream>
+
+1613360909 source:c:\users\hp\documents\github\escuelaverano\oferta.cpp
+	"Oferta.h"
+
+1613359730 c:\users\hp\documents\github\escuelaverano\oferta.h
+	<string>
+	"Curso.h"
+
+1613367416 source:c:\users\hp\documents\github\escuelaverano\administrador.cpp
+	"Administrador.h"
+	"Oferta.h"
+
+1613367409 c:\users\hp\documents\github\escuelaverano\administrador.h
+	<vector>
+	"Persona.h"
+
+1613367399 source:c:\users\hp\documents\github\escuelaverano\profesor.cpp
+	"Profesor.h"
+	"Curso.h"
+
+1613367382 c:\users\hp\documents\github\escuelaverano\profesor.h
+	<vector>
+	"Persona.h"
+
+1613360755 source:c:\users\hp\documents\github\escuelaverano\matricula.cpp
+	"Matricula.h"
+
+1613360730 c:\users\hp\documents\github\escuelaverano\matricula.h
 

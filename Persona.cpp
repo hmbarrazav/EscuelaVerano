@@ -19,16 +19,10 @@ string Persona::getTipo(){
     return tipo;
 }
 
-/* ostream& operator<<(ostream &Escribe, Persona &objP){
-    Escribe<<"DNI: "<<objP.DNI<<endl;
-    Escribe<<"Nombres: "<<objP.nombres<<endl;
-    Escribe<<"Tipo: "<<objP.tipo<<endl<<endl;
-    return Escribe;
+void Persona::mostrarDatos(){
+    cout<<"DNI: "<<DNI<<endl;
+    cout<<"Nombres: "<<nombres<<endl;
+    cout<<"Tipo Personal: "<<tipo<<endl;
+    //cout<<"Tipo Descuento: "<<tipoDescuento<<endl;
+    cout<<endl;
 }
-
-ostream& operator<<(ostream &Escribe, Persona* &objP){
-    Escribe<<"DNI: "<<objP->DNI<<endl;
-    Escribe<<"Nombres: "<<objP->nombres<<endl;
-    Escribe<<"Tipo: "<<objP->tipo<<endl<<endl;
-    return Escribe;
-} */

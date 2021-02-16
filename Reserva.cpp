@@ -1,6 +1,7 @@
 #include "Reserva.h"
 #include "Alumno.h"
 #include "Curso.h"
+#include "Matricula.h"
 
 Reserva::Reserva(string date, Alumno *objA, Curso *objC){
     fecha = date;
@@ -18,4 +19,8 @@ Curso* Reserva::getCurso(){
 
 string Reserva::getFecha(){
     return fecha;
+}
+
+void Reserva::asignarMatricula(double imp){
+    matricula = new Matricula(imp);
 }

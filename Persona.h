@@ -1,5 +1,6 @@
 #ifndef PERSONA_H
 #define PERSONA_H
+
 #include<string>
 #include<iostream>
 using namespace std;
@@ -14,7 +15,7 @@ class Persona{
         string getDNI();
         string getNombres();
         string getTipo();
-        virtual void mostrarDatos() = 0;
+        virtual void mostrarDatos();
         //friend ostream& operator<<(ostream &, Persona &);
         //friend ostream& operator<<(ostream &, Persona* &);
 };

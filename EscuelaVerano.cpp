@@ -2,16 +2,26 @@
 #include "Persona.h"
 #include "Reserva.h"
 #include "Alumno.h"
+#include "Administrador.h"
+#include "Profesor.h"
 #include "Curso.h"
 #include <iostream>
 using namespace std;
 
-void EscuelaVerano::agregarCurso(Curso *cur){
-    listaCursos.push_back(cur);
+void EscuelaVerano::agregarCurso(string name, double price, bool cancel){
+    listaCursos.push_back(new Curso(name, price, cancel));
 }
 
-void EscuelaVerano::agregarPersona(Persona *per){
-    listaPersonas.push_back(per);
+void EscuelaVerano::agregarAlumno(string dni, string names, string type, int tD){
+    listaPersonas.push_back(new Alumno(dni, names, type, tD));
+}
+
+void EscuelaVerano::agregarAdministrador(string dni, string names, string type){
+    listaPersonas.push_back(new Administrador(dni, names, type));
+}
+
+void EscuelaVerano::agregarProfesor(string dni, string names, string type){
+    listaPersonas.push_back(new Profesor(dni, names, type));
 }
 
 void EscuelaVerano::mostrarCursos(){
