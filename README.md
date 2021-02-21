@@ -1,4 +1,4 @@
-# EscuelaVerano
+# Escuela de Verano
 
 El repositorio tiene como propósito mostrar la implementación de un sistema para una Escuela de Verano. Se ha tomado como base dos videos del profesor Antonio Garrido Tejero de la Universidad Politécnica de Valencia:
 https://www.youtube.com/watch?v=Q1kH7XKxK5I
