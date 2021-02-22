@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Persona.h"
 #include "Alumno.h"
 #include "Curso.h"
@@ -11,7 +12,12 @@ int main(){
     bool exito;
     EscuelaVerano escV;
 
-    escV.agregarAlumno("87675645","Daniel Chique","Alumno",1);
+    string dni, names;
+
+    cout<<"Ingrese DNI: "; cin>>dni;
+    cin.ignore();
+    cout<<"Ingrese nombres: "; getline(cin,names);
+    escV.agregarAlumno(dni,names,"Alumno",1);
     escV.agregarAlumno("92837412","Christian Tarqui","Alumno",1);
     escV.agregarAlumno("08946195","Carlos Condori","Alumno",1);
 

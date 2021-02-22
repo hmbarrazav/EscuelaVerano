@@ -1,7 +1,7 @@
 #ifndef ESCUELAVERANO_H
 #define ESCUELAVERANO_H
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -23,7 +23,8 @@ class EscuelaVerano{
         int buscarAlumno(string);
         int buscarCurso(string);
         int buscarProfesor(string);
-
+        vector<string*> listarCursosAdministrador(string);
+        void aniadirListaCursosxAdm(string*, vector<string*>&);
 };
 
 #endif // ESCUELAVERANO_H

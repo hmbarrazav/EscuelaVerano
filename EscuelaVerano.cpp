@@ -82,3 +82,18 @@ int EscuelaVerano::buscarProfesor(string dni){
     }
     return -1;
 }
+
+vector<string*> EscuelaVerano::listarCursosAdministrador(string dni){
+    vector<string*> listaCursosxAdm;
+    string datosCompletos[5];
+    for(int i = 0; i < listaCursos.size(); i++){
+        if(listaCursos[i]->ofertadoPorAdministrador(dni) == true){
+            aniadirListaCursosxAdm(listaCursos[i]->obtenerDatosCompletos(), listaCursosxAdm);
+        }
+    }
+    return listaCursosxAdm;
+}
+
+void EscuelaVerano::aniadirListaCursosxAdm(string* datosCompletos, vector<string*> &listaCursosxAdm){
+    listaCursosxAdm.push_back(datosCompletos);
+}

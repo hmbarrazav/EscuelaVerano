@@ -25,8 +25,9 @@ class Curso{
         bool getCancelado();
         void aniadirReserva(Reserva*);
         void mostrarDatos();
-        bool ofertadoPorAdministrador(int);
-        string obtenerDatosCompletos();
+        bool ofertadoPorAdministrador(string);
+        string* obtenerDatosCompletos();
+        int obtenerNumeroReservas();
         void aniadirOferta(Oferta*);
 };
 

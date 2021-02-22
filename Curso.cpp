@@ -1,7 +1,9 @@
 #include "Curso.h"
 #include "Reserva.h"
 #include "Alumno.h"
+#include "Oferta.h"
 #include<iostream>
+#include <sstream>
 using namespace std;
 
 Curso::Curso(string name, double price, bool cancel, Profesor *pro){
@@ -43,12 +45,32 @@ void Curso::mostrarDatos(){
     }
 }
 
-bool Curso::ofertadoPorAdministrador(int dni){
-
+bool Curso::ofertadoPorAdministrador(string dni){
+    return true;
 }
 
-string Curso::obtenerDatosCompletos(){
+string* Curso::obtenerDatosCompletos(){
+    string datosCompletos[5], fechaInsercion;
+    int nroReservas;
 
+    fechaInsercion = oferta->getFechaInsercion();
+    nroReservas = obtenerNumeroReservas();
+
+    datosCompletos[0] = nombre;
+    ostringstream strP, strC, strN; //streams que servirán para la conversión de anytype a string
+    strP << precio;
+    strC << cancelado;
+    strN << nroReservas;
+
+    datosCompletos[1] = strP.str();
+    datosCompletos[2] = strC.str();
+    datosCompletos[3] = fechaInsercion;
+    datosCompletos[4] = strN.str();
+    return datosCompletos;
+}
+
+int Curso::obtenerNumeroReservas(){
+    return listaReservas.size();
 }
 
 void Curso::aniadirOferta(Oferta *ofer){
